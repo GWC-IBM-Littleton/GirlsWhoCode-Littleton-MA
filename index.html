@@ -6,32 +6,27 @@
 		<!--<link rel="stylesheet" href="gwc.css">-->
 		<style>
 			body {
-				background-color: #6eceb2;
+				--gwc-blue:#1C4262;
+				--gwc-teal:#6eceb2;
+				background-color: var(--gwc-teal);
 			}
-
 			.pageBanner{
 				position: relative;
 				text-align: center;
 				border-bottom: 5px dotted white;
-				margin: auto;
+				margin-bottom: 10px;
 				background-color:#0D4369;
 			}
-
 			h1 {
-				color: #6eceb2; /* Teal: as specified by the Girls Who Code branding packet */
+				color: var(--gwc-teal); /* Teal: as specified by the Girls Who Code branding packet */
 				font-size: 3em;
 				text-align: center;
 				position: absolute;
 				top: 67%;
 				left: 50%;
-
-
 			}
-
-
-
 			  .quote{
-				color: #1C4262;
+				color: var(--gwc-blue);
 				background-color: white;
 				font-style: italic;
 				font-size: 1.25em;
@@ -43,11 +38,11 @@
 			 }
 			 
 			 .tabs {/*for unordered list view*/
-               			float: left;
-               			width: 100%;
-		       		padding: 10px; 
-               			margin: 0;
-               			list-style-type: none;
+               float: left;
+               width: 100%;
+		       padding: 10px; 
+               margin: 0;
+               list-style-type: none;
 		
 			}
 			li {
@@ -57,19 +52,28 @@
 			a{
 			background-color: yellow;
 			transition: background-color .5s;
+			color: var(--gwc-blue);
+			
 			}
 			
 			a:hover {
-			   background-color:#1C4262;
+			   background-color: var(--gwc-blue);
 			   color: #6eceb2;
 			}
 			footer {
 			text-align: center;
 			}
+			.mySlides {
+				display:none;
+				image-orientation: 90deg;
+			
+			}
 			
 		</style>
 	</head>
+	
 	<body>
+	
 		<div class="pageBanner">
 		<ul class="tabs">
 					<li><a href="index.html">Home</a></li>
@@ -81,7 +85,7 @@
 				<h1> Littleton </h1>
 			</div>
 			<!--<img src="GWC-DesignThinking.JPG" alt="the girls" width="300"> Girls Who Code doing Design Thinking</p> -->
-			<div class="quote"/>
+			<div class="quote">
 			<!--<p class="quote">-->
 			<p>
 			"Humans are allergic to change. They love to say, 'We've always done it this way.'
@@ -89,12 +93,31 @@
 			- Grace M. Hopper
 			</p><!--</p>-->
 			</div>
+			<div>
+				<img class="mySlides" src="BrainstormingIdeas.JPG" style="width:500px"/>
+				<img class="mySlides" src="CreatingLayout.JPG" style="width:500px"/>	
+				<img class="mySlides" src="DesignThinking.JPG" style="width:500px"/>
+				<img class="mySlides" src="PlanningSlideshow.JPG" style="width:500px"/>
+			</div>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br>
 		    <a href="info.html">Additional Information</a>
 			</p>
 			</footer>
-
-							</body>
-						</html>
-						
+			<script>
+			var myIndex = 0;
+			carousel();
+			function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1;}
+			x[myIndex-1].style.display = "block";
+			setTimeout(carousel, 2000);
+			}
+			</script>
+			</body>
+</html>
