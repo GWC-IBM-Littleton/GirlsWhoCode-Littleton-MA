@@ -64,6 +64,14 @@
 			footer {
 			text-align: center;
 			}
+			
+			
+			.slideshow {
+				position: relative;
+				margin: auto;
+				display: inline-block;
+			}
+			
 			.mySlides {
 				display:none;
 				image-orientation: 90deg;
@@ -80,6 +88,19 @@
 			width:27%;
 			}
 			
+			.next, .prev {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				margin: auto;
+			}
+			
+			.next {
+				right: 0;
+				
+
+			}
+			
 		</style>
 	</head>
 	
@@ -88,9 +109,9 @@
 		<div class="pageBanner">
 		<ul class="tabs">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="aboutus.html">About Us</a></li>
-					<li><a href="gallery.html">Collage</a></li>
+					<li><a href="profile.html">Profile</a></li>
 					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="topictlist.html">Topics</a></li>
 				</ul>
 			<img id="logo" src="https://3zjc852t4swp1lmezl171oga-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/GWC-logo_2016-on-navy.jpg" alt="The Girls Who Code Logo"/> 
 				<h1> Littleton </h1>
@@ -102,11 +123,16 @@
 			- Grace M. Hopper
 			</p><!--</p>-->
 			</div>
-			<div>
+			<div class="slideshow">
 				<img class="mySlides slide center" src="BrainstormingIdeas.JPG"/>
 				<img class="mySlides slide center" src="CreatingLayout.JPG"/>	
 				<img class="mySlides slide center" src="DesignThinking.JPG"/>
 				<img class="mySlides slide center" src="PlanningSlideshow.JPG"/>
+				
+				  <!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 			</div>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br>
@@ -115,18 +141,32 @@
 			</footer>
 			<script>
 			var myIndex = 0;
-			carousel();
-			function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
+			carousel(myIndex);
+			
+			
+			function carousel(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				<!--if (myIndex > x.length) {myIndex = 1}-->
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1;}
+				x[myIndex-1].style.display = "block";
+				setTimeout(carousel, 5000);
 			}
-			myIndex++;
-			if (myIndex > x.length) {myIndex = 1;}
-			x[myIndex-1].style.display = "block";
-			setTimeout(carousel, 3000);
+
+			
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
 			}
+			
+			function plusSlides(n)
+			{
+				carousel(myIndex += n);
+			}
+			
 			</script>
 			</body>
 </html>
