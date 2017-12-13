@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -19,11 +20,11 @@
 			}
 			h1 {
 				color: var(--gwc-teal); /* Teal: as specified by the Girls Who Code branding packet */
-				font-size: 3em;
+				/*font-size: 200%;*/
 				text-align: center;
 				position: absolute;
-				top: 67%;
-				left: 50%;
+				bottom:-5px;
+				width:100%;
 			}
 			  .quote{
 				color: var(--gwc-blue);
@@ -66,7 +67,17 @@
 			.mySlides {
 				display:none;
 				image-orientation: 90deg;
-			
+			}
+			img.center {
+			display: block;
+			margin: 15px auto;
+			}
+			img.slide {
+			width: 500px;
+			height:500px;
+			}
+			#logo {
+			width:27%;
 			}
 			
 		</style>
@@ -81,12 +92,10 @@
 					<li><a href="gallery.html">Collage</a></li>
 					<li><a href="schedule.html">Schedule</a></li>
 				</ul>
-			<img id="logo" src="https://3zjc852t4swp1lmezl171oga-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/GWC-logo_2016-on-navy.jpg" alt="The Girls Who Code Logo" width="40%"> 
+			<img id="logo" src="https://3zjc852t4swp1lmezl171oga-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/GWC-logo_2016-on-navy.jpg" alt="The Girls Who Code Logo"/> 
 				<h1> Littleton </h1>
 			</div>
-			<!--<img src="GWC-DesignThinking.JPG" alt="the girls" width="300"> Girls Who Code doing Design Thinking</p> -->
 			<div class="quote">
-			<!--<p class="quote">-->
 			<p>
 			"Humans are allergic to change. They love to say, 'We've always done it this way.'
 			I try to fight that. That's why I have a clock on my wall that runs counter-clockwise."
@@ -94,10 +103,10 @@
 			</p><!--</p>-->
 			</div>
 			<div>
-				<img class="mySlides" src="BrainstormingIdeas.JPG" style="width:500px"/>
-				<img class="mySlides" src="CreatingLayout.JPG" style="width:500px"/>	
-				<img class="mySlides" src="DesignThinking.JPG" style="width:500px"/>
-				<img class="mySlides" src="PlanningSlideshow.JPG" style="width:500px"/>
+				<img class="mySlides slide center" src="BrainstormingIdeas.JPG"/>
+				<img class="mySlides slide center" src="CreatingLayout.JPG"/>	
+				<img class="mySlides slide center" src="DesignThinking.JPG"/>
+				<img class="mySlides slide center" src="PlanningSlideshow.JPG"/>
 			</div>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br>
@@ -116,7 +125,7 @@
 			myIndex++;
 			if (myIndex > x.length) {myIndex = 1;}
 			x[myIndex-1].style.display = "block";
-			setTimeout(carousel, 2000);
+			setTimeout(carousel, 3000);
 			}
 			</script>
 			</body>
