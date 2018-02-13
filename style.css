@@ -3,6 +3,9 @@ body {
 				--gwc-teal:#6eceb2;
 				background-color: var(--gwc-teal);
 			}
+div {
+	width: 100%;
+}
 			.pageBanner{
 				position: relative;
 				text-align: center;
