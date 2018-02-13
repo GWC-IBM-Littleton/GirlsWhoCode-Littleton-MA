@@ -46,13 +46,14 @@ body {
 			li a {
 			display: block;
 			text-align: center;
-			padding: 14px 16px;
+			padding: 5%;
 			text-decoration: none;
 			}
 			a{
 			background-color: white;
 			transition: background-color .5s;
 			color: var(--gwc-blue);
+			width:18.75%;
 			
 			}
 			
