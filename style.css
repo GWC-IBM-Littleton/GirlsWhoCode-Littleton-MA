@@ -73,7 +73,7 @@ body {
 			
 			.mySlides {
 				display:none;
-				image-orientation: 90deg;
+				/*image-orientation: 90deg;*/
 			}
 			img.center {
 			display: block;
