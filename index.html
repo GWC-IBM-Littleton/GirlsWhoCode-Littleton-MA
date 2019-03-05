@@ -51,11 +51,12 @@
 			<script>
 			var myIndex = 0;
 			var isPaused = false;
-			var backgroundColors = ["none","gray"];
+			var backgroundColors = ["transparent","gray"];
 			var pauseCounter = 0;
 			carousel(myIndex);
 				
 			document.getElementById("pause").addEventListener("click", function(){
+				e.preventDefault();
 			  	isPaused = !isPaused;
 				pauseCounter = pauseCounter + 1;
 				document.getElementById("pause").style.backgroundColor = backgroundColors[pauseCounter%2];
