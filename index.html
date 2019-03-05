@@ -38,7 +38,9 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 			</div>
-			<button id="pause">Pause</button>
+			<center>
+				<div id="pause" style="width:200px; height:200px; background-image:pause.png"></div>
+			</center>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br/>
 			</p>
@@ -46,10 +48,14 @@
 			<script>
 			var myIndex = 0;
 			var isPaused = false;
+			var backgroundColors = ["white","lime"];
+			var pauseCounter = 0;
 			carousel(myIndex);
 				
 			document.getElementById("pause").addEventListener("click", function(){
 			  	isPaused = !isPaused;
+				pauseCounter = pauseCounter + 1;
+				document.getElementbyId("pause").style.backgroundColor = backgroundColors[pauseCounter%2];
 			}); 
 			
 			
