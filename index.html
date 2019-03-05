@@ -39,7 +39,7 @@
 
 			</div>
 			<center>
-				<div id="pause" style="width:200px; height:200px; background-image:pause.png"></div>
+				<div id="pause" style="width:200px; height:200px; background-image:url(/pause.png)"></div>
 			</center>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br/>
@@ -55,7 +55,7 @@
 			document.getElementById("pause").addEventListener("click", function(){
 			  	isPaused = !isPaused;
 				pauseCounter = pauseCounter + 1;
-				document.getElementbyId("pause").style.backgroundColor = backgroundColors[pauseCounter%2];
+				document.getElementById("pause").style.backgroundColor = backgroundColors[pauseCounter%2];
 			}); 
 			
 			
