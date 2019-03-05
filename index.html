@@ -38,13 +38,19 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 			</div>
+			<button id="pause">Pause</button>
 			<footer>
 			<p>Created by Girls Who Code Littleton<br/>
 			</p>
 			</footer>
 			<script>
 			var myIndex = 0;
+			var isPaused = false;
 			carousel(myIndex);
+				
+			document.getElementById("pause").addEventListener("click", function(){
+			  	isPaused = !isPaused;
+			}); 
 			
 			
 			function carousel(n) {
@@ -52,12 +58,16 @@
 				var x = document.getElementsByClassName("mySlides");
 				<!--if (myIndex > x.length) {myIndex = 1}-->
 				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";
+					if(!isPaused) {
+						x[i].style.display = "none";
+					}
 				}
 				myIndex++;
 				if (myIndex > x.length) {myIndex = 1;}
-				x[myIndex-1].style.display = "block";
-				setTimeout(carousel, 5000);
+				if(!isPaused){
+					x[myIndex-1].style.display = "block";
+				}
+				setTimeout(carousel, 8000);
 			}
 
 			
