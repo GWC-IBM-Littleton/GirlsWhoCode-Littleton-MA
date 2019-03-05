@@ -56,7 +56,6 @@
 			carousel(myIndex);
 				
 			document.getElementById("pause").addEventListener("click", function(){
-				e.preventDefault();
 			  	isPaused = !isPaused;
 				pauseCounter = pauseCounter + 1;
 				document.getElementById("pause").style.backgroundColor = backgroundColors[pauseCounter%2];
