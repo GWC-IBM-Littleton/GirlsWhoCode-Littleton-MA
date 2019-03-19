@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
 
 <style>
@@ -24,17 +24,132 @@ h3 .menu {
 border-top: 5px solid grey;
 }
 
+* {box-sizing: border-box;}
+.mySlides {display: none; float: center;}
+img {vertical-align: middle; float: center; border: 10px solid rgb(32, 22, 68);}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  float: center;
+}
+
+/* Caption text */
+.text {
+  color: rgb(20, 20, 20);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
 </style>
 </head>
 <body>
 
 <h1>Dessert Recipes</h1>
 
+<hr>
+
 <div class="menu">
 <h3>Tips & Tricks</h3>
 <h3>Types of Desserts</h3>
 <h3>Allergy Friendly</h3>
 </div>
+
+<center>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/easy_chocolate_cake_31070_16x9.jpg" alt="Chocolate Cake" style="width:50%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://images-gmi-pmc.edge-generalmills.com/ce145e97-8611-4f0b-a49c-c1403e0c7ab9.jpg" alt="Strawberry Pie" style="width:50%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg" alt="Chocolate Chip Cookies" style="width:50%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</center>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
 
 </body>
 </html>
