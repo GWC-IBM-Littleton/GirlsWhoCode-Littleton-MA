@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Some Random Title</title>
+<title>Angela's Blog</title>
 <style>
 h1 {
-	color:red;
-	font-family:fantasy;
+	color:white;
+	font-family:"Stencil Std", fantasy;
 }
 h2 {
 	color:green;
@@ -13,19 +13,58 @@ h2 {
 }
 p {
 	color:blue;
-	font-family:sans-serif;
+	font-family:"Bradley Hand", cursive;
 }
 h6 {
 	color:purple:
 	font-family:monospace;
 }
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.head-title {
+	background-color:black;
+	padding:20px;
+	text-align:center;
+}
+
+.contents {
+	float:left;
+	width:15%;
+	padding: 20px;
+	background-color:rgb(33,8,75);
+	color:white;
+}
+.main-articles {
+	float:right;
+	width:80%;
+	padding:10px;
+	background-color:rgb(254, 220,250);
+}
+.article {
+	border-bottom: 6px dotted black;
+}
+
+
 </style>
 </head>
 <body>
 
+<div class="head-title">
 <h1>Angela's blog</h1>
+</div>
 
-
+<div class="contents">
         <h3>Contents</h3>
 
         <ul>
@@ -37,14 +76,16 @@ h6 {
 	    <li><a href="#thirdpost">Third Post!</a></li>
 	    <li><a href="#fourthpost">Fourth Post!</a></li>
         </ul>
+</div>
 
 
+<div class="main-articles">
 
 <h2 id="firstpost">First post: Skipping Eighth Grade</h2>
 
         <h6>02/20/2030</h6>
 
-
+<div class="article">
 <p>Something exciting happened. </p>
 
         <p>Honestly, I never expected this to happen, although I bet some of my
@@ -60,13 +101,13 @@ person actually <i>using my <b>brain</b></i>.</p>
         <p>Anyway, I'll get back to you guys later!</p>
 
         <p>Peace!</p>
-
+</div>
 
 
         <h2 id="secondpost">Second Post: Making 'Looping'</h2>
 
         <h6>06/14/2030</h6>
-
+<div class="article">
         <p>Sorry, my fellow blogger-people, or whatever you want me to call
  you.</p>
 
@@ -81,9 +122,12 @@ person actually <i>using my <b>brain</b></i>.</p>
 
         <p>Have a nice summer! I know I'm not because... preparing for
 high school and all that... <i>yeeeaaahhh</i> it's gonna be a nice school year.</p>
+</div>
 
 		<h2 id="thirdpost">Third Post: School Tour</h2>
 	<h6>07/24/2030</h6>
+
+<div class="article">
 	<p>Hello peoples, once again. </p>
 	<p>I'm not dead, don't worry about that. I'm still a living, breathing
 creature. </p>
@@ -113,9 +157,11 @@ robots and stuffs like that.</p>
 and seeing what AP courses I'm gonna take.<p>
 	<p><i>Fun.</i></p>
 	<p>Angie out.</p>
+</div>
 
 		<h2 id="fourthpost">Fourth Post: First Day</h2>
 	<h6>09/02/2030</h6>
+<div class="article">
 	<p>This was one of the not-so-bad first days of school.</p>
 	<p>Then again, I've never had the <b>worst</b> day of school of my
 life, like how in some books the girl/boy/whatever-gender-I-don't-even-care
@@ -147,11 +193,15 @@ just came here.</p>
 	<p>Anyway, I have to go do some homeworks.</p>
 	<p>So fun, isn't it.</p>
 	<p>So not looking forward to mid-terms.</p>
+</div>
 
 		<h2 id="fifthpost">Fifth Post: Bored</h2>
 	<h6>11/14/2030</h6>
+<div class="article">
 	<p>I can't type much today because of the amount of homework and studying.
 </p>
+</div>
+</div>
 
 
 </body>
